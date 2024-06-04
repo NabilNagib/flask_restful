@@ -1,0 +1,50 @@
+Steps to run the application:
+
+1. Create a virtual environment:
+
+python3 -m venv env
+
+
+2. Activate the virtual environment:
+
+source venv/bin/activate
+
+
+3. Install the required packages: 
+
+pip install -r requirements.txt
+
+
+4. type
+
+cd server
+
+
+5. Initialize the database:
+
+flask db init
+flask db migrate
+flask db upgrade
+
+6. Seed the database:
+
+python seed.py
+
+7. Run the application:
+
+flask run
+
+or
+
+python app.py
+
+
+
+
+
+
+
+
+
+
+
