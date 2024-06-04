@@ -14,6 +14,8 @@ migrate = Migrate(app, db)
 db.init_app(app)
 api = Api(app)
 
+
+#
 class Home(Resource):
     def get(self):
         response_dict = {
@@ -26,7 +28,7 @@ class Home(Resource):
         return response
 
 
-
+#GET Method
 class Newsletters(Resource):
     def get(self):
         newsletters = Newsletter.query.all()
@@ -42,7 +44,8 @@ class Newsletters(Resource):
                 404,
             )
         return response
-
+    
+#POST Method
     def post(self):
         data = request.get_json()
         if not data:
@@ -78,6 +81,7 @@ class Newsletters(Resource):
 
 
 class NewsletterByID(Resource):
+#GET By ID
     def get(self, id):
         newsletter = Newsletter.query.filter_by(id=id).first()
         if newsletter:
@@ -93,6 +97,7 @@ class NewsletterByID(Resource):
             )
         return response
 
+#PUT Method
     def put(self, id):
         newsletter = Newsletter.query.filter_by(id=id).first()
         if not newsletter:
@@ -132,7 +137,8 @@ class NewsletterByID(Resource):
             200,
         )
         return response
-
+    
+#DELETE Method
     def delete(self, id):
         newsletter = Newsletter.query.filter_by(id=id).first()
         if not newsletter:
@@ -149,7 +155,8 @@ class NewsletterByID(Resource):
             200,
         )
         return response
-    
+
+#HEADER    
 class NewspapersByHeader(Resource):
     def get(self):
         header_value = request.headers.get('Filter')

@@ -1,0 +1,96 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Newsletters",
+    "collectionId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+    "dateExported": "2024-06-04T15:25:15.740Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "dbf42e00-772d-4a8d-8814-f64f8021162a",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "Get All",
+            "url": "http://127.0.0.1:5000//newsletters",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-04T15:02:42.712Z",
+            "modified": "2024-06-04T15:02:42.712Z",
+            "headers": []
+        },
+        {
+            "_id": "f4e70e8a-2ef0-4c0f-9cd0-b256c7275c81",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "Get By Id",
+            "url": "http://127.0.0.1:5000//newsletters/1",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-04T15:03:26.337Z",
+            "modified": "2024-06-04T15:03:26.337Z",
+            "headers": []
+        },
+        {
+            "_id": "52879c97-0151-4a18-8da1-8e5a90ac8b8e",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "PUT",
+            "url": "http://127.0.0.1:5000///newsletters/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-06-04T15:09:27.822Z",
+            "modified": "2024-06-04T15:09:27.822Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tree Planting\",\n  \"body\": \"Every Citizen is expected to plant at least one tree\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "06558e1c-ce4a-468c-8413-2126920efc85",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "DELETE",
+            "url": "http://127.0.0.1:5000///newsletters/50",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2024-06-04T15:10:46.627Z",
+            "modified": "2024-06-04T15:10:46.627Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tree Planting\",\n  \"body\": \"Every Citizen is expected to plant at least one tree\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7d4578fd-815b-43b9-b78a-cd7fa44f724a",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "HEADER",
+            "url": "http://127.0.0.1:5000/newsletters/filter",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-06-04T15:15:47.580Z",
+            "modified": "2024-06-04T15:15:47.580Z",
+            "headers": [
+                {
+                    "name": "Filter",
+                    "value": "Tree"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tree Planting\",\n  \"body\": \"Every Citizen is expected to plant at least one tree\"\n}",
+                "form": []
+            }
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://127.0.0.1:5000"
+        }
+    },
+    "ref": "6dXG0esuNPwmIxMDxS102H1_siFEWkG4kG69z2bCZB_zL5y5cc5HQndvJZbwX5l9i55KX36VbQqOcnWSKes2bA"
+}
