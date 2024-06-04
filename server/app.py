@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 from flask import Flask, request, make_response, jsonify
 from flask_migrate import Migrate
 from flask_restful import Api, Resource
@@ -18,11 +17,11 @@ api = Api(app)
 #
 class Home(Resource):
     def get(self):
-        response_dict = {
+        response = {
             "message": "Welcome to the Newsletter RESTful API",
         }
         response = make_response(
-            response_dict,
+            response,
             200,
         )
         return response
@@ -33,9 +32,9 @@ class Newsletters(Resource):
     def get(self):
         newsletters = Newsletter.query.all()
         if newsletters:
-            response_dict_list = [n.to_dict() for n in newsletters]
+            response_list = [n.to_dict() for n in newsletters]
             response = make_response(
-                response_dict_list,
+                response_list,
                 200,
             )
         else:
@@ -71,9 +70,9 @@ class Newsletters(Resource):
         )
         db.session.add(new_record)
         db.session.commit()
-        response_dict = new_record.to_dict()
+        response = new_record.to_dict()
         response = make_response(
-            response_dict,
+            response,
             201,
         )
         return response
@@ -85,9 +84,9 @@ class NewsletterByID(Resource):
     def get(self, id):
         newsletter = Newsletter.query.filter_by(id=id).first()
         if newsletter:
-            response_dict = newsletter.to_dict()
+            response = newsletter.to_dict()
             response = make_response(
-                response_dict,
+                response,
                 200,
             )
         else:
@@ -131,9 +130,9 @@ class NewsletterByID(Resource):
             newsletter.body = body
 
         db.session.commit()
-        response_dict = newsletter.to_dict()
+        response = newsletter.to_dict()
         response = make_response(
-            response_dict,
+            response,
             200,
         )
         return response
@@ -169,9 +168,9 @@ class NewspapersByHeader(Resource):
 
         newsletters = Newsletter.query.filter(Newsletter.title.contains(header_value) | Newsletter.body.contains(header_value)).all()
         if newsletters:
-            response_dict_list = [n.to_dict() for n in newsletters]
+            response_list = [n.to_dict() for n in newsletters]
             response = make_response(
-                response_dict_list,
+                response_list,
                 200,
             )
         else:

@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Newsletters",
     "collectionId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
-    "dateExported": "2024-06-04T15:25:15.740Z",
+    "dateExported": "2024-06-04T15:52:06.553Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -73,7 +73,29 @@
             "method": "GET",
             "sortNum": 50000,
             "created": "2024-06-04T15:15:47.580Z",
-            "modified": "2024-06-04T15:15:47.580Z",
+            "modified": "2024-06-04T15:40:54.987Z",
+            "headers": [
+                {
+                    "name": "Filter",
+                    "value": "plant"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"title\": \"Tree Planting\",\n  \"body\": \"Every Citizen is expected to plant at least one tree\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5d0783b3-6590-45a7-881c-affab5d8520f",
+            "colId": "c024e8a0-ab81-486e-86ab-7be37d566d11",
+            "containerId": "",
+            "name": "POST",
+            "url": "http://127.0.0.1:5000/newsletters",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-06-04T15:51:35.263Z",
+            "modified": "2024-06-04T15:51:35.263Z",
             "headers": [
                 {
                     "name": "Filter",
@@ -82,7 +104,7 @@
             ],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"title\": \"Tree Planting\",\n  \"body\": \"Every Citizen is expected to plant at least one tree\"\n}",
+                "raw": "  {\n    \"body\": \"The Kenya Wildlife Society has dispatched a special team to hunt down a lioness spotted in a residential area in Ongata Rongai's Nazarene area.\",\n    \"published_at\": \"2024-06-04 07:15:01\",\n    \"title\": \"Lioness on the loose\"\n  }",
                 "form": []
             }
         }
@@ -92,5 +114,5 @@
             "baseUrl": "http://127.0.0.1:5000"
         }
     },
-    "ref": "6dXG0esuNPwmIxMDxS102H1_siFEWkG4kG69z2bCZB_zL5y5cc5HQndvJZbwX5l9i55KX36VbQqOcnWSKes2bA"
+    "ref": "6dXG0esuNPwmIxMDxS102C-YBfmRJKfDM-Xlpx4JLcZC_1UuLCnicbNZTIpVaC01u2DIxxfcr7Vb3NQ2-8dHnw"
 }
