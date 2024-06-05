@@ -124,8 +124,11 @@ Response: 200 OK with a JSON array of filtered newsletters.
 ## HTTP CODES
 
 200: Successful request.
+
 201: Successful creation of a new resource.
+
 400: Bad request, usually due to missing or invalid data in the request.
+
 404: Resource not found.
 
 <https://www.dotcom-monitor.com/wiki/knowledge-base/http-status-codes-list/>
