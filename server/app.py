@@ -1,6 +1,6 @@
 from flask import Flask, request, make_response, jsonify
 from flask_migrate import Migrate
-from flask_restful import Api, Resource
+from flask_restful import Api, Resource  
 from models import db, Newsletter
 
 app = Flask(__name__)
@@ -13,7 +13,7 @@ db.init_app(app)
 api = Api(app)
 
 
-#
+
 class Home(Resource):
     def get(self):
         response = {
@@ -154,7 +154,7 @@ class NewsletterByID(Resource):
         )
         return response
 
-#HEADER    
+#HEADER-FILTER    
 class NewspapersByHeader(Resource):
     def get(self):
         header_value = request.headers.get('Filter')
@@ -180,6 +180,7 @@ class NewspapersByHeader(Resource):
         return response
 
 
+#Mapping resource classes  & URL endpoints for handling requests.
 api.add_resource(Home, '/')
 api.add_resource(Newsletters, '/newsletters')
 api.add_resource(NewsletterByID, '/newsletters/<int:id>')
