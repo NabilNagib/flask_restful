@@ -45,8 +45,11 @@ This is a Flask-RESTful Resource class that defines a GET route for the /newslet
 5. Error Codes:
 
     200: Successful request.
+
     201: Successful creation of a new resource.
+    
     400: Bad request, usually due to missing or invalid data in the request.
+    
     404: Resource not found.
 
 
